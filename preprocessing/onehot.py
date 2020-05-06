@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelBinarizer
 
 def onehot(df:pd.DataFrame, series_list:list):
     #creates a onehot encoding of each series in the series lists. creates dummy series, concats and drops the initial series from df
-    #wrote this because pd.get_dummies would run out of memory in my pandas only onehot function, sklearn does it much more efficiently
+    #wrote this because pd.get_dummies would run out of memory in my jupyter instance, sklearn does it much more efficiently
     encoder = LabelBinarizer()
     transformed = []
     df.dropna()
